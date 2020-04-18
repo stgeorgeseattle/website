@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport'/>
+
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+    <title>
+        St. George Coptic Orthodox Church - Kirkland, WA USA
+    </title>
+    
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!-- CSS Files -->
+    <link href="assets/css/material-kit.css?v=2.0.5" rel="stylesheet"/>
+    <link href='assets/css/fullcalendar.min.css' rel='stylesheet' />
+    
+    <style>
+
+    .icon-bar {
+      position: fixed;
+      top: 25%;
+      z-index:100;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+    
+    .icon-bar a {
+      display: block;
+      text-align: center;
+      padding: 10px;
+      transition: all 0.3s ease;
+      color: white;
+      font-size: 15px;
+    }
+    
+    .icon-bar a:hover {
+      background-color: #000;
+    }
+    
+    .facebook {
+      background: #3B5998;
+      color: white;
+    }
+    
+    .twitter {
+      background: #55ACEE;
+      color: white;
+    }
+    
+    .instagram {
+      background: #ad4b39;
+      color: white;
+    }
+    
+    .youtube {
+      background: #bb0000;
+      color: white;
+    }
+    
+    .soundcloud {
+      background: #ff8800;
+      color: white;
+    }
+    
+    .content {
+      margin-left: 75px;
+      font-size: 30px;
+    }
+
+    #loading {
+        display: none;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    #calendar {
+        margin: 0 auto;
+    }
+
+    .fc-header-toolbar h2 {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    @media only screen and (max-width: 765px) {
+        .fc-toolbar .fc-right {
+            float: none;
+            display: inline-block;
+            margin-bottom: 15px;
+        }   
+    }
+    
+    </style>
+
+</head>
+
+<body class="landing-page sidebar-collapse">
+
+    
+<nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100"
+     id="sectionsNav">
+    <div class="container">
+        <div class="navbar-translate">
+            <a class="navbar-brand" href="http://www.stgeorgeseattle.org">
+                St. George Coptic Orthodox Church</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link scroll-link" href="#section-aboutus">
+                        <i class="material-icons">info</i> About Us
+                    </a>
+                </li>
+                <li class="dropdown nav-item">
+                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                        <i class="material-icons">person_pin</i> Services
+                    </a>
+                    <div class="dropdown-menu dropdown-with-icons">
+                        <a href="#section-TheGoodSamaritans" class="dropdown-item scroll-link">
+                            <i class="material-icons">local_pharmacy</i> The Good Samaritans
+                        </a>
+                        <a href="#section-SaintAbraham" class="dropdown-item scroll-link">
+                            <i class="material-icons">local_airport</i> Saint Abraham
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link scroll-link" href="#section-email">
+                        <i class="material-icons">email</i> Subscribe
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link scroll-link" href="#section-donate">
+                        <i class="material-icons">add_alert</i> Donate
+                    </a>
+                </li>
+            </ul>    
+        </div>
+    </div>
+</nav>
+<div class="page-header header-filter" data-parallax="true" style="background-image: url('assets/img/church/0.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 class="title">Welcome!</h1>
+                <h4>A Coptic Orthodox Church with services for the Greater Seattle Area.</h4>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main main-raised">
+    <div class="container">
+        <div class="section text-center">
+            <div class="row">
+                <div class="ml-auto mr-auto">
+                    <h2 class="title">Follow us on social media</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="ml-auto mr-auto">         
+                    <a href="https://www.facebook.com/StGeorgeCopticSeattle/" class="btn btn-round btn-lg facebook"><i class="fab fa-facebook"></i> Facebook</a> 
+                    <a href="https://twitter.com/StGeorgeCoptic" class="btn btn-round btn-lg twitter"><i class="fab fa-twitter"></i> Twitter</a> 
+                    <a href="https://www.instagram.com/stgeorgeseattle/" class="btn btn-round btn-lg instagram"><i class="fab fa-instagram"></i> Instagram</a> 
+                    <a href="https://www.youtube.com/user/StGeorgeCoptic/" class="btn btn-round btn-lg youtube"><i class="fab fa-youtube"></i> Youtube</a> 
+                    <a href="https://soundcloud.com/st-george-coptic-seattle" class="btn btn-round btn-lg soundcloud"><i class="fab fa-soundcloud"></i> Soundcloud</a> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="section text-center">
+            <div class="row">
+                <div class="col-md-8 ml-auto mr-auto">
+                    <h2 class="title">Church Calendar</h2>
+                    <h5 class="description">Add our calendar to your favourite app to stay in the know. </h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 ml-auto mr-auto">
+                    <!-- big fat button for George Ayad -->
+                    <a class="btn btn-success btn-round btn-lg mb-5" href="https://calendar.google.com/calendar/r?cid=stgeorgeseattle.org_f1t0u2ucn4n9v3g7dfg2p9l0ek@group.calendar.google.com" target="_blank">
+                        <i class="material-icons">event</i>  Subscribe To Calendar
+                    </a>
+                </div>
+            </div>
+
+            <div class="embed-responsive">
+                <div id='loading'>loading...</div>
+                <div id='calendar'></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="carousel">
+        <h2 class="title text-center">Our Church</h2>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-8 mr-auto ml-auto">
+                    <!-- Carousel Card -->
+                    <div class="card card-raised card-carousel">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"
+                             data-interval="3000">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1" class=""></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2" class=""></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="3" class=""></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="4" class=""></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item carousel-item-next carousel-item-left">
+                                    <img class="d-block w-100" src="assets/img/church/1.jpg">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="assets/img/church/2.jpg">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="assets/img/church/3.jpg">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="assets/img/church/4.jpg">
+                                </div>
+                                <div class="carousel-item active carousel-item-left">
+                                    <img class="d-block w-100" src="assets/img/church/5.jpg">
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                               data-slide="prev">
+                                <i class="material-icons">keyboard_arrow_left</i>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                               data-slide="next">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- End Carousel Card -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid text-center" id="section-priests">
+        <h2 class="title">Our Priests</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card card-nav-tabs">
+                    <div class="card-header card-header-info">
+                        <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+                        <div class="nav-tabs-navigation">
+                            <div class="nav-tabs-wrapper">
+                                <h3>Father Angelos Sarkis</h3>
+                                <ul class="nav nav-tabs" data-tabs="tabs">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="mailto:frangelossarkis@stgeorgeseattle.org"
+                                           data-toggle="tab">
+                                            <i class="material-icons">email</i> frangelossarkis@stgeorgeseattle.org
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="tel:425-803-0516" class="nav-link" target="_blank" rel="noopener">
+                                            <i class="material-icons">phone</i> 425-803-0516
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-content">
+                            <div class="text-left">
+                                <img src="assets/img/FrAngelos2.png" width="180px" height="180px"
+                                     style="padding-right: 10px" alt="Thumbnail Image"
+                                     class="img-fluid rounded-bottom float-left">
+                                Father Angelos Sarkis was born on May 23rd, 1960. He was raised in Tanta, Egypt,
+                                where he received a Bachelor of Science in Business and Accounting in 1982.
+                                Fr. Angelos also received a Bachelor in Theology at the Clerical College in
+                                Cairo, Egypt in 1993.
+                                <p></p>
+                                He was ordained a Presbyter by His Grace Bishop Paula, on March 3rd, 1995, over
+                                St. George Cathedral in Tanta, Egypt.
+                                He served in Tanta for 8 years as a priest, after which he was chosen by His
+                                Holiness Pope Shenouda III to serve the congregation of St. George church in
+                                Seattle, WA on April 15th, 2003.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card card-nav-tabs">
+                    <div class="card-header card-header-success">
+                        <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+                        <div class="nav-tabs-navigation">
+                            <div class="nav-tabs-wrapper">
+                                <h3>Father Mina Adib</h3>
+                                <ul class="nav nav-tabs" data-tabs="tabs">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="mailto:frminaadib@stgeorgeseattle.org"
+                                           data-toggle="tab">
+                                            <i class="material-icons">email</i> frminaadib@stgeorgeseattle.org
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="tel:425-803-0516" class="nav-link" target="_blank" rel="noopener">
+                                            <i class="material-icons">phone</i> 425-803-0516
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-content">
+                            <div class="text-left">
+                                <img src="assets/img/FrMina.jpg" width="180px" height="180px"
+                                     style="padding-right: 10px" alt="Thumbnail Image"
+                                     class="img-fluid rounded-bottom float-left">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="section-aboutus">
+        <div class="row">
+            <div class="col-md-8 ml-auto mr-auto">
+                <h2 class="text-center title">About Us</h2>
+                <div class="row">
+                    <div class="col-md-4 ml-auto mr-auto">
+                        <b>St. George's Coptic Orthodox Church</b> <br/>
+                        <p>13216 NE 100th St.<br/>Kirkland, WA 98033</p>
+                        <p>Phone: <a href="tel:425-803-0516" target="_blank" rel="noopener">425-803-0516</a></p>
+                        <p>General: <a href="mailto:info@StGeorgeSeattle.org">info@StGeorgeSeattle.org</a></p>
+                    </div>
+                    <div class="col-md-4 ml-auto mr-auto">
+                        <p><strong>Newcomers</strong></p>
+                        <p>If you are moving to Seattle and need support email<br/><a
+                                href="mailto:stabraham@stgeorgeseattle.org">stabraham@stgeorgeseattle.org</a><br/>Or
+                            Call/text <a href="tel:425-202-5570" target="_blank" rel="noopener">425-202-5570</a></p>
+                    </div>
+                    <p><br/>
+                        <a href="https://www.facebook.com/StGeorgeCopticSeattle/" target="_blank"
+                           class="btn btn-info btn-round" role="button" aria-pressed="true">
+                            <i class="fab fa-facebook-square"></i> Facebook </a>
+                        <br/>
+                        <a href="https://twitter.com/StGeorgeCoptic" target="_blank" class="btn btn-info btn-round"
+                           role="button" aria-pressed="true">
+                            <i class="fab fa-twitter-square"></i> Twitter </a>
+                    </p>
+                    <div class=" embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item"
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10742.86423856593!2d-122.16402!3d47.689934!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb00013e535527073!2sSt+George+Coptic+Orthodox+Church!5e0!3m2!1sen!2sus!4v1549135423776"
+                                width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid" id="section-TheGoodSamaritans">
+        <h2 class="title text-center">The Good Samaritans</h2>
+        <div class="row">
+            <div class="col-md-12">
+                <p>This effort is to involve our children and grow the spirit of service within them, through
+                    serving Christ in the poor and those in need. If you want to contribute please email: <a
+                            href="mailto:goodsamaritans@stgeorgeseattle.org">goodsamaritans@stgeorgeseattle.org</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="section-SaintAbraham">
+        <h2 class="title text-center">Saint Abraham</h2>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card  card-body">
+
+                    <div class="blockquote undefined">1 Peter 4:10As each one has received a gift, minister it to one
+                        another, as good stewards of the manifold grace of God.
+                    </div>
+                    <p>The church is happy to introduce a service for families or individuals relocating to the&nbsp;Seattle
+                        area.&nbsp;The service goal is to show&nbsp;Christ's love to people starting a new life in
+                        Seattle.</p>
+                    <p><strong>Saint Abraham</strong> service &nbsp;for newcomers and immigrants.
+                    </p>
+                    <div id=":1y.co" class="JL" style="color: #262626;">
+                        <div id=":23.ma" class="Mu SP">
+                            <div></div>
+                            <div id=":23.co"><span dir="rtl"> ل تحتاج لمساعدة في الاستقرار فى الولاية</span>‎</div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Email&nbsp;<a href="mailto:stabraham@stgeorgeseattle.org" target="_blank">stabraham@stgeorgeseattle.org</a>
+                        </li>
+                        <li>Call/text 1 (425) 202-5570</li>
+                    </ul>
+                    <h3>Services</h3>
+                    <hr>
+                    <h4>Relocation support</h4>
+                    <div>As needed by the family or individuals moving to the area.&nbsp;We do not provide employment or
+                        housing.
+                    </div>
+                    <hr>
+                    <h4>Coaching Classes</h4>
+                    <p>Classes to help&nbsp;members of the congregation&nbsp;(new or current) be better equipped to find
+                        a job in the US.</p>
+                    <p><strong>The&nbsp;class:</strong></p>
+                    <ul>
+                        <li>Will&nbsp;cover how to write a resume,&nbsp;find positions on the internet (LinkedIn)&nbsp;and
+                            what&nbsp;to do in an interview
+                        </li>
+                        <li>Classes will be weekly, for 4 sessions</li>
+                        <li>Location will be decided at a later stage</li>
+                    </ul>
+                    <div>If interested to join this class please email&nbsp;<a
+                            href="mailto:stabraham@stgeorgeseattle.org">stabraham@stgeorgeseattle.org</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section bg-dark" id="section-email">
+        <div class="row">
+            <div class="col-md-8 ml-auto mr-auto">
+                <h2 class="text-center title">Subscribe to our emails</h2>
+                <h4 class="text-center description">Stay in the know when new events are published...</h4>
+                <form class="contact-form"
+                      action="https://stgeorgeseattle.us8.list-manage.com/subscribe/post?u=f20f838403902e88342455d16&amp;id=c84848f505"
+                      method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+                      target="_blank" novalidate>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="bmd-label-floating">Your First Name</label>
+                                <input type="text" name="FNAME" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="bmd-label-floating">Your Last Name</label>
+                                <input type="text" name="LNAME" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="bmd-label-floating">Your Email</label>
+                                <input type="email" name="EMAIL" class="form-control" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 ml-auto mr-auto text-center">
+                            <button class="btn btn-success btn-raised" type="submit">
+                                Submit Request
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid" id="section-donate">
+        <h2 class="title text-center">Donations</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card  card-body">
+                    <div class="blockquote undefined">
+                        <p>Each man should give what he has decided in his heart to give, not reluctantly or under
+                            compulsion,
+                            for God loves a cheerful giver.</p>
+                        <p class="text-right">2 Corinthians 9:7</p>
+                    </div>
+
+                    <div class="alert alert-info">
+                        <div class="container">
+                            Many companies will match your donations to non-profit organizations!
+                            <a href="https://doublethedonation.com/tips/blog/2013/01/seattle-washington-companies-matching-gift-programs/"
+                               target="_blank">
+                                <i class="material-icons">library_books</i> Learn more
+                                <div class="ripple-container"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input
+                                name="cmd"
+                                type="hidden"
+                                value="_s-xclick"/><br/><input
+                                name="hosted_button_id" type="hidden" value="TDVCGBF8TGMBL"/><br/><input
+                                alt="PayPal - The safer, easier way to pay online!" name="submit"
+                                src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
+                                type="image"/><br/><img
+                                src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" alt="" width="1" height="1"
+                                border="0"/>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card  card-body">
+                    <h3>Mail a Check</h3>
+                    <p>If you would like to mail the Church a check, kindly make it out to <b>St. George Coptic Orthodox
+                        Church</b> and send it to the following address:</p>
+                    <address>
+                        <em>PO Box 876,</em><br/>
+                        <em> Kirkland, WA 98083 </em>
+                    </address>
+
+                    <h3>Direct Deposit</h3>
+                    <p>If you would like to wire money directly to the Church, please email <a
+                            href="mailto:donations@stgeorgeseattle.org">donations@stgeorgeseattle.org</a> for wiring
+                        instructions.</p>
+
+                    <h3>Bank Bill Pay</h3>
+                    <p>If you would like to automate your donation please setup a the church as bill in your bank
+                        account with
+                        the following address</p>
+                    <address><em>PO Box 876,</em><br/><em> Kirkland, WA 98083 </em></address>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer class="footer footer-default">
+    <div class="container">
+
+        <div class="copyright float-right">
+            St. George Coptic Church &copy;
+            <script>
+                document.write(new Date().getFullYear())
+            </script>
+        </div>
+    </div>
+</footer>
+
+<div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h3 style="margin: 8px 0 30px 0;">
+                    <strong class="event-title"></strong>
+                </h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="align-top pr-4">
+                                <i class="material-icons">access_time</i>
+                            </td>
+                            <td class="align-top pb-4">
+                                <div class="event-date"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="align-top pr-4">
+                                <i class="material-icons">location_on</i> 
+                            </td>
+                            <td class="align-top pb-4">
+                                <div class="event-location"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="align-top pr-4">
+                                <i class="material-icons">notes</i> 
+                            </td>
+                            <td class="align-top pb-4">
+                                <div class="event-description"></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- <div>
+                    <h3><strong class="event-title"></strong></h3>
+                <div>
+                    <div class="d-inline"><i class="material-icons">access_time</i></div>
+                    <h4 class="event-date"></h4>
+                </div>
+                <div>
+                    <i class="material-icons">location_on</i> 
+                    <h5 class="event-location"></h5>
+                </div>
+                <div>
+                    <i class="material-icons">notes</i> 
+                    <div class="event-description"></div>
+                </div>
+            </div> -->
+            <div class="modal-footer">
+                <!-- <button type="button" class="btn btn-secondary mr-4" data-dismiss="modal">Close</button> -->
+                <a class="btn btn-success btn-round btn-lg event-url" href="#" target="_blank">Add to my calendar</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--   Core JS Files   -->
+<script src="assets/js/core/jquery.min.js" type="text/javascript"></script>
+<script src="assets/js/core/popper.min.js" type="text/javascript"></script>
+<script src="assets/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
+<script src="assets/js/plugins/moment.min.js"></script>
+<!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
+<script src="assets/js/plugins/bootstrap-datetimepicker.js" type="text/javascript"></script>
+<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+<script src="assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+<!--  Google Maps Plugin    -->
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+<!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
+<script src="assets/js/material-kit.js?v=2.0.5" type="text/javascript"></script>
+
+<script src='assets/js/plugins/fullcalendar.min.js'></script>
+<script src='assets/js/plugins/gcal.min.js'></script>
+
+<script>
+    $(".scroll-link").click(function (e) {
+        e.preventDefault();
+        let section = $(this).attr("href");
+        $("html, body").animate({
+            scrollTop: $(section).offset().top
+        });
+    });
+</script>
+
+<script>
+
+$(document).ready(function() {
+
+    $('#calendar').fullCalendar({
+
+    header: {
+        left: $(window).width() < 765 ? '':'title',
+        right: $(window).width() < 765 ? 'month,listWeek,agendaDay':'prev today next',
+        center: $(window).width() < 765 ? 'prev title next':'month,listWeek,agendaDay'
+    },
+
+    buttonText: {
+        today:    'Today',
+        month:    'Month',
+        week:     'Week',
+        day:      'Day',
+        listWeek:  'Week'
+    },
+
+    firstDay: 1,
+    defaultView:'listWeek',
+    
+    nowIndicator: true,
+    displayEventTime: true,
+    contentHeight: 'auto',
+
+    googleCalendarApiKey: 'AIzaSyAK2sQAYAru07-SBDdxaUb4ZIFm-sfqwnY',
+    events: 'stgeorgeseattle.org_f1t0u2ucn4n9v3g7dfg2p9l0ek@group.calendar.google.com',
+
+    // data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"
+
+    eventRender: function(event, element) {
+        //element
+    },
+
+    eventClick: function(event) {
+        $('#exampleModal').modal('show', event);
+        return false;
+    },
+
+    loading: function(bool) {
+        $('#loading').toggle(bool);
+    }
+
+    });
+
+});
+
+$('#exampleModal').on('show.bs.modal', function (event) {
+    var modal = $(this)
+    var calEvent = event.relatedTarget
+    
+    // console.log(calEvent);
+    // console.log(calEvent.title);
+    // console.log(calEvent.description);
+    // console.log(calEvent.start);
+    // console.log(calEvent.end);
+    // console.log(calEvent.url);
+    // console.log("=========");
+
+    modal.find('.event-title').text(calEvent.title)
+
+    if (calEvent.location) {
+        modal.find('.event-location').text(calEvent.location)
+    } else {
+        modal.find('.event-location').text("")
+    }
+    
+    if (calEvent.description) {
+        modal.find('.event-description').html(calEvent.description)
+    } else {
+        modal.find('.event-description').text("")
+    }
+    
+    if (calEvent.start.isSame(calEvent.end, 'day')) {
+        modal.find('.event-date').text(calEvent.start.format('MMMM Do YYYY') + " ⋅ " + calEvent.start.format('h:mm a') + " — " + calEvent.end.format('h:mm a'))
+    } else {
+        modal.find('.event-date').text(calEvent.start.format('MMMM Do YYYY, h:mm a') + " — " + calEvent.end.format('MMMM Do YYYY, h:mm a'))
+    }
+    
+    $(modal.find('.event-url')).attr('href', calEvent.url)
+})
+  
+  </script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-5881374-12"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-5881374-12');
+</script>
+
+</body>
+
+</html>

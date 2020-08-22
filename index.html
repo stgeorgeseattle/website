@@ -100,15 +100,37 @@
         }   
     }
     
+    /* Updates to support alerts. */
+    #sectionsNav {
+        /* Allows for multi-line navbars, needed for the alert. */
+        flex-wrap: wrap;
+        /* Avoid padding-top since it doesn't always match the contents' colors. Instead, we define a margin-top on the first child below, which can be overriden if that element doesn't want it. */
+        padding-top: 0;
+    }
+    #sectionsNav>div:first-child {
+        margin-top:25px;
+    }
+    #sectionsNav div.alert-container {
+        margin-top:0;
+        text-align: center;
+        width: 100%;
+    }
+    #sectionsNav div.alert-container a {
+        text-decoration: underline;
+    }
     </style>
 
 </head>
 
 <body class="landing-page sidebar-collapse">
-
-    
 <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100"
      id="sectionsNav">
+    <!-- Comment this out when it's no longer needed; style should revert to previous look. -->
+    <div class="alert-container">
+        <div class="alert alert-info" role="alert">
+            <strong>Covid-19 update:</strong> Church liturgies are back on a limited basis and require signing up to attend. <a class="scroll-link" href="#section-email">Register</a> for church emails below to receive each month’s sign-up link.
+        </div>
+    </div>
     <div class="container">
         <div class="navbar-translate">
             <a class="navbar-brand" href="http://www.stgeorgeseattle.org">

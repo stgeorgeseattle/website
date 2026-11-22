@@ -2316,6 +2316,7 @@ blockquote {
 .priest--contact--info {
   margin-bottom: 0px;
   margin-left: 10px;
+  overflow-wrap: anywhere;
 }
 
 .paragraph-10 {
